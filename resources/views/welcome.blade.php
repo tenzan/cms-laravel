@@ -9,16 +9,15 @@
     </head>
     <body class="container">
 
-        <form method="POST" action="/avatars" enctype="multipart/form-data">
+        <form method="POST" action="/contents" enctype="multipart/form-data">
 
             {{ csrf_field() }}
 
-            <input type="file" name='avatar'></input>
+            <input type="file" name='content'></input>
 
 
             <button type="submit">Submit</button>
         </form>
-    
 
     </body>
 </html>

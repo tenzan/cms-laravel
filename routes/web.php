@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('avatars', function(){
-    request()->file('avatar')->store('avatars', 's3');
+Route::post('contents', function(){
+
+    $file = request()->file('content')->store('contents', 's3');
 
     return back();
 });
