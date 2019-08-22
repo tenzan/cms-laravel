@@ -11,8 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view('/', 'home');
+Route::view('/contents', 'contents');
+
+Route::get('/posts/{id}', function($id) {
+    $pages = [
+	1 => [
+	'title' => 'Post title 1',
+	],
+	2 => [
+        'title' => 'Post title 2',
+        ],
+     ];
+    return view('posts', ['data'=> $pages[$id]]);
 });
 
 Route::post('contents', function(){
